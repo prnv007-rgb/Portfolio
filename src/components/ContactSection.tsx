@@ -51,14 +51,27 @@ const ContactSection = () => {
               </div>
               
               <div className="flex gap-3 mt-6">
-                <Button variant="outline" size="sm" className="simple-hover">
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </Button>
-                <Button variant="outline" size="sm" className="simple-hover">
-                  <Linkedin className="h-4 w-4 mr-2" />
-                  LinkedIn
-                </Button>
+                <a
+                  href="https://github.com/prnv007-rgb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm" className="simple-hover">
+                    <Github className="h-4 w-4 mr-2" />
+                    GitHub
+                  </Button>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/pranav-r-mallia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm" className="simple-hover">
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    LinkedIn
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -70,7 +83,7 @@ const ContactSection = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your name"
+                  placeholder="Mr XYZ"
                   required
                 />
               </div>
@@ -81,7 +94,7 @@ const ContactSection = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="your.email@example.com"
+                  placeholder="pranavmallia2004@gmail.com"
                   required
                 />
               </div>
