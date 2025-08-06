@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Simplified Modern Theme */
+    --background: 218 23% 11%;
+    --foreground: 210 20% 92%;
+
+    --card: 218 20% 15%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 218 20% 15%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 218 23% 11%;
+
+    --secondary: 218 15% 25%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 218 15% 20%;
+    --muted-foreground: 210 12% 65%;
+
+    --accent: 268 83% 58%;
+    --accent-foreground: 218 23% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 218 15% 25%;
+    --input: 218 15% 25%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.5rem;
+
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .simple-hover {
+    transition: transform 0.2s ease;
+  }
+
+  .simple-hover:hover {
+    transform: translateY(-2px);
+  }
+
+  .skill-badge {
+    @apply px-3 py-1.5 rounded-md bg-card border text-sm transition-colors duration-200;
+  }
+
+  .skill-badge:hover {
+    @apply bg-primary/10 border-primary;
+  }
+
+  .cta-button {
+    @apply px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium transition-all duration-200;
+  }
+
+  .cta-button:hover {
+    @apply bg-primary/90 transform -translate-y-0.5;
+  }
+}
