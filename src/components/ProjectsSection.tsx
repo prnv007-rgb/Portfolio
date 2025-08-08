@@ -2,38 +2,38 @@ import { Card } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
 
 const ProjectsSection = () => {
-  const projects = [
+   const projects = [
+   {
+     title: "PONG AI - Adaptive Single-Agent Pong Game",
+     description: "Developed and deployed a web-based Pong game where users can play against an adaptive AI opponent trained using Reinforcement Learning. Designed a retro-themed UI with CSS animations for an engaging user experience.",
+     tags: ["Python", "Reinforcement Learning", "HTML", "CSS"],
+   },
+   {
+     title: "Perflect - Code Analysis & Optimization",
+     description: "Engineered a web-based Python coding assistant with a LeetCode-style interface for live code execution and real-time feedback. Integrated a Retrieval-Augmented Generation (RAG) system using FAISS to provide optimal solutions and complexity analysis.",
+     tags: ["Streamlit", "RAG", "FAISS", "Python"],
+   },
+   {
+     title: "GitSage - GitHub Code Summarizer",
+     description: "Built a full-stack AI Code Summarizer with a React.js frontend. It uses a RAG pipeline with Langchain and FAISS to dynamically index a repository and answer natural language queries about the codebase.",
+     tags: ["React", "FastAPI", "RAG", "Langchain"],
+   },
+   {
+     title: "Career-Kraft - AI Resume Evaluator",
+     description: "Developed an advanced resume evaluation tool using a fine-tuned BERT model for semantic analysis and a custom career-path recommendation model. It provides actionable feedback on resume content and suggests career trajectories.",
+     tags: ["Python", "BERT", "NLP", "Machine Learning"],
+   },
+   {
+     title: "Multi-Emotion Detection Model",
+     description: "Fine-tuned a BERT+CapsuleNet on RoBERTa model for multi-label emotion analysis. The model parses text to detect nuanced emotions, achieving an F1-score of 80% and demonstrating strong contextual understanding.",
+     tags: ["PyTorch", "BERT", "CapsuleNet", "NLP"],
+   },
     {
-      title: "Smart Recommendation Engine",
-      description: "Built a recommendation system for an e-commerce platform using collaborative filtering. Improved user engagement by 35% with personalized product suggestions.",
-      tags: ["Python", "TensorFlow", "PostgreSQL"],
-    },
-    {
-      title: "Text Sentiment Analyzer",
-      description: "Real-time sentiment analysis tool for social media monitoring. Processes thousands of posts per minute using fine-tuned BERT models.",
-      tags: ["NLP", "BERT", "FastAPI"],
-    },
-    {
-      title: "Document Q&A Assistant",
-      description: "RAG-based system that answers questions from uploaded documents. Uses vector embeddings and LLM integration for accurate responses.",
-      tags: ["RAG", "FAISS", "OpenAI API"],
-    },
-    {
-      title: "Emotion Detection App",
-      description: "Web app that detects emotions from text and speech input. Built with React frontend and Python ML backend.",
-      tags: ["React", "Audio Processing", "ML"],
-    },
-    {
-      title: "Code Helper Extension",
-      description: "VS Code extension that generates code snippets based on natural language descriptions. Uses GPT integration with context awareness.",
-      tags: ["TypeScript", "VS Code API", "GPT"],
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Interactive dashboard for data visualization and predictive analytics. Helps businesses understand their metrics better.",
-      tags: ["React", "D3.js", "Express.js"],
+      title: "Book Recommendation Engine",
+      description: "Built a book recommendation system for suggesting similar books for readers using K nearest neighbors approach",
+      tags: ["Python", "KNN", "Streamlit", "ML"]
     }
-  ];
+ ];
 
   return (
     <section id="projects" className="py-20 px-6 bg-card/30">
@@ -65,13 +65,13 @@ const ProjectsSection = () => {
               </div>
 
               <div className="flex gap-2">
-                <button className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+                <button className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1" onClick={()=>window.open("https://github.com/prnv007-rgb?tab=repositories")}>
                   <Github className="h-3 w-3" />
                   Code
                 </button>
-                <button className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1">
+                <button className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1" onClick={()=>window.open("https://main-page-hazel.vercel.app/")}>
                   <ExternalLink className="h-3 w-3" />
-                  Demo
+                  Play(Demo)
                 </button>
               </div>
             </Card>
